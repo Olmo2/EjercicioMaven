@@ -17,21 +17,33 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "trabajadores")
+@Table(name = "talleres")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class TallerBean {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column
 	private long idTaller;
-	
+
 	@OneToOne
-	@JoinColumn(name="FK_concesionario")
+	@JoinColumn(name = "FK_concesionario")
 	private ConcesionarioBean concesionario;
-	
-	@OneToMany(cascade = CascadeType.MERGE)
+
+	@OneToMany(mappedBy = "taller", cascade = CascadeType.MERGE)
 	private List<ReparacionBean> reparaciones = new ArrayList<ReparacionBean>();
+	
+	
+
+	public void addReparacion(ReparacionBean reparacion) {
+
+		if (!reparaciones.contains(reparacion)) {
+
+			reparaciones.add(reparacion);
+			// dejamos vinculada a la reparecion que añadimos este taller (this)
+			reparacion.setTaller(this);
+		}
+	}
 
 	public long getIdTaller() {
 		return idTaller;

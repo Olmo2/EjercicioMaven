@@ -19,7 +19,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "franquicias")
+@Table(name = "concesionarios")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class ConcesionarioBean {
 
@@ -44,7 +44,7 @@ public class ConcesionarioBean {
 	private int telefono;
 	
 	//Trabajan muchos en un solo concesionario
-	@OneToMany( cascade = CascadeType.ALL)
+	@OneToMany( mappedBy="concesionario")
 	private List<TrabajadorBean> trabajadores = new ArrayList<TrabajadorBean>();
 
 	// Un concesionario para muchos coches
@@ -52,6 +52,15 @@ public class ConcesionarioBean {
 	private List<CocheBean> coches = new ArrayList<CocheBean>();
 	
 
+public void addTrabajador(TrabajadorBean trabajador) {
+		
+		if(!trabajadores.contains(trabajador)) {
+			
+			trabajadores.add(trabajador);
+			trabajador.setConcesionario(this);
+		}
+	}
+	
 	
 
 	public void addCoche(CocheBean coche) {

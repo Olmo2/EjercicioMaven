@@ -19,7 +19,7 @@
     <properties>
       <!-- Depende del tipo de base de datos que queramos conectar -->
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
-      <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/desktop/prueba" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:~/desktop/prueba2" />
       <property name="javax.persistence.jdbc.user" value="sa" />
       <property name="javax.persistence.jdbc.password" value="" />
       

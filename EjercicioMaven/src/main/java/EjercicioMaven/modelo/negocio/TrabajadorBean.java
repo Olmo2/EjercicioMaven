@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -48,6 +49,17 @@ public class TrabajadorBean {
 	// Un trabajador solo trabaja en un concesionario
 	@ManyToOne(cascade = CascadeType.MERGE)
 	private ConcesionarioBean concesionario;
+	
+//	@ManyToOne(cascade = CascadeType.MERGE)
+//	private CategoriaBean categoria;
+
+//	public CategoriaBean getCategoria() {
+//		return categoria;
+//	}
+//
+//	public void setCategoria(CategoriaBean categoria) {
+//		this.categoria = categoria;
+//	}
 
 	public long getIdTrabajador() {
 		return idTrabajador;

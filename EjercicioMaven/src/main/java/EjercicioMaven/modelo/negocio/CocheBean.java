@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
@@ -52,6 +53,7 @@ public class CocheBean {
 	
 	//Un coche esta en muchos concesionarios 
 	@ManyToMany(cascade = CascadeType.MERGE)
+//	@JoinTable(name="FK_Coches")
 	private List<ConcesionarioBean> concesionarios = new ArrayList<ConcesionarioBean>();
 
 	public long getIdCoche() {

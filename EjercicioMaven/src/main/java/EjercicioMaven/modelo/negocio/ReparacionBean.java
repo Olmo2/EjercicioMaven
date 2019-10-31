@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -43,6 +44,7 @@ public class ReparacionBean {
 	private String marca;
 	
 	@ManyToOne(cascade = CascadeType.MERGE)
+	@JoinColumn(name="taller")
 	private TallerBean taller;
 
 	public long getIdReparacion() {

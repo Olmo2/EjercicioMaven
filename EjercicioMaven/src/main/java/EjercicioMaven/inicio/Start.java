@@ -2,6 +2,7 @@ package EjercicioMaven.inicio;
 
 import EjercicioMaven.modelo.coche.CreateCoche;
 import EjercicioMaven.modelo.concesionario.CreateConcesionario;
+
 import EjercicioMaven.modelo.negocio.CocheBean;
 import EjercicioMaven.modelo.negocio.ConcesionarioBean;
 import EjercicioMaven.modelo.negocio.ReparacionBean;
@@ -48,15 +49,41 @@ public class Start {
 
 		TrabajadorBean antonio = new TrabajadorBean();
 		antonio.setNombre("Antonio");
-		antonio.setConcesionario(cochesPaco);
+//		antonio.setConcesionario(cochesPaco);
 
 		TrabajadorBean luis = new TrabajadorBean();
 		luis.setNombre("Luis");
-		luis.setConcesionario(cochesPaco);
+//		luis.setConcesionario(cochesPaco);
 
 		TrabajadorBean ana = new TrabajadorBean();
 		ana.setNombre("Ana");
-		ana.setConcesionario(vehiculosPedro);
+//		ana.setConcesionario(vehiculosPedro);
+		
+//		CategoriaBean gerente= new CategoriaBean();
+//		gerente.setNombre("Gerente");
+//		gerente.setPlus(500);
+//		
+//		CategoriaBean responsable= new CategoriaBean();
+//		responsable.setNombre("Responsable");
+//		responsable.setPlus(350);
+//		
+//		CategoriaBean jefetaller= new CategoriaBean();
+//		jefetaller.setNombre("Jefe De Taller");
+//		jefetaller.setPlus(250);
+//		
+//		CategoriaBean mecanico= new CategoriaBean();
+//		mecanico.setNombre("Mecanico");
+//		mecanico.setPlus(150);
+//		
+//		CategoriaBean vendedor= new CategoriaBean();
+//		vendedor.setNombre("Vendedor");
+//		vendedor.setPlus(150);
+//		
+//		CategoriaBean aprendiz= new CategoriaBean();
+//		aprendiz.setNombre("Aprendiz");
+//		aprendiz.setPlus(0);
+		
+		
 		
 		
 		TallerBean ada = new TallerBean();
@@ -77,12 +104,20 @@ public class Start {
 		autosJuan.addCoche(c4cactus);
 		cochesPaco.addCoche(czero);
 		
+		cochesPaco.addTrabajador(antonio);
+		cochesPaco.addTrabajador(ana);
+		autosJuan.addTrabajador(luis);
+		
+		ada.addReparacion(reparacion1);
+	
+		
 		
 		/*
 		 * **************************************************
 		 * P E R S I S T I E N D O    L O S     D A T O S
 		 * **************************************************
-		 */	
+		 */
+		
 		
 		CreateConcesionario createConcesionario = new CreateConcesionario();
 		createConcesionario.create(cochesPaco);

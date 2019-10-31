@@ -50,16 +50,16 @@ public class TrabajadorBean {
 	@ManyToOne(cascade = CascadeType.MERGE)
 	private ConcesionarioBean concesionario;
 	
-//	@ManyToOne(cascade = CascadeType.MERGE)
-//	private CategoriaBean categoria;
+	@ManyToOne(cascade = CascadeType.MERGE)
+	private CategoriaBean categoria;
 
-//	public CategoriaBean getCategoria() {
-//		return categoria;
-//	}
-//
-//	public void setCategoria(CategoriaBean categoria) {
-//		this.categoria = categoria;
-//	}
+	public CategoriaBean getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(CategoriaBean categoria) {
+		this.categoria = categoria;
+	}
 
 	public long getIdTrabajador() {
 		return idTrabajador;

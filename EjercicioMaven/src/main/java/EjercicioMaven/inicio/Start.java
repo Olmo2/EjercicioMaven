@@ -1,8 +1,9 @@
 package EjercicioMaven.inicio;
 
+import EjercicioMaven.modelo.categoria.CreateCategoria;
 import EjercicioMaven.modelo.coche.CreateCoche;
 import EjercicioMaven.modelo.concesionario.CreateConcesionario;
-
+import EjercicioMaven.modelo.negocio.CategoriaBean;
 import EjercicioMaven.modelo.negocio.CocheBean;
 import EjercicioMaven.modelo.negocio.ConcesionarioBean;
 import EjercicioMaven.modelo.negocio.ReparacionBean;
@@ -59,29 +60,29 @@ public class Start {
 		ana.setNombre("Ana");
 //		ana.setConcesionario(vehiculosPedro);
 		
-//		CategoriaBean gerente= new CategoriaBean();
-//		gerente.setNombre("Gerente");
-//		gerente.setPlus(500);
-//		
-//		CategoriaBean responsable= new CategoriaBean();
-//		responsable.setNombre("Responsable");
-//		responsable.setPlus(350);
-//		
-//		CategoriaBean jefetaller= new CategoriaBean();
-//		jefetaller.setNombre("Jefe De Taller");
-//		jefetaller.setPlus(250);
-//		
-//		CategoriaBean mecanico= new CategoriaBean();
-//		mecanico.setNombre("Mecanico");
-//		mecanico.setPlus(150);
-//		
-//		CategoriaBean vendedor= new CategoriaBean();
-//		vendedor.setNombre("Vendedor");
-//		vendedor.setPlus(150);
-//		
-//		CategoriaBean aprendiz= new CategoriaBean();
-//		aprendiz.setNombre("Aprendiz");
-//		aprendiz.setPlus(0);
+		CategoriaBean gerente= new CategoriaBean();
+		gerente.setNombre("Gerente");
+		gerente.setPlus(500);
+		
+		CategoriaBean responsable= new CategoriaBean();
+		responsable.setNombre("Responsable");
+		responsable.setPlus(350);
+		
+		CategoriaBean jefetaller= new CategoriaBean();
+		jefetaller.setNombre("Jefe De Taller");
+		jefetaller.setPlus(250);
+		
+		CategoriaBean mecanico= new CategoriaBean();
+		mecanico.setNombre("Mecanico");
+		mecanico.setPlus(150);
+		
+		CategoriaBean vendedor= new CategoriaBean();
+		vendedor.setNombre("Vendedor");
+		vendedor.setPlus(150);
+		
+		CategoriaBean aprendiz= new CategoriaBean();
+		aprendiz.setNombre("Aprendiz");
+		aprendiz.setPlus(0);
 		
 		
 		
@@ -103,6 +104,11 @@ public class Start {
 		vehiculosPedro.addCoche(c3aircross);
 		autosJuan.addCoche(c4cactus);
 		cochesPaco.addCoche(czero);
+		
+		gerente.addTrabajador(luis);
+		vendedor.addTrabajador(ana);
+		jefetaller.addTrabajador(antonio);
+		
 		
 		cochesPaco.addTrabajador(antonio);
 		cochesPaco.addTrabajador(ana);
@@ -129,6 +135,15 @@ public class Start {
 		createCoche.create(c3aircross);
 		createCoche.create(c4cactus);
 		createCoche.create(czero);
+		
+		CreateCategoria createCategoria = new CreateCategoria();
+		createCategoria.create(gerente);
+		createCategoria.create(responsable);
+		createCategoria.create(jefetaller);
+		createCategoria.create(mecanico);
+		createCategoria.create(vendedor);
+		createCategoria.create(aprendiz);
+		
 		
 		CreateTrabajador createTrabajdor= new CreateTrabajador();
 		createTrabajdor.create(ana);

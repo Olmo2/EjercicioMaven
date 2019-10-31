@@ -15,9 +15,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-
-
-
 @Entity
 @Table(name = "concesionarios")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -30,7 +27,7 @@ public class ConcesionarioBean {
 
 	@Column(name = "nombre")
 	private String nombre;
-	
+
 	@Column(name = "cif")
 	private String cif;
 
@@ -42,26 +39,23 @@ public class ConcesionarioBean {
 
 	@Column(name = "telefono")
 	private int telefono;
-	
-	//Trabajan muchos en un solo concesionario
-	@OneToMany( mappedBy="concesionario")
+
+	// Trabajan muchos en un solo concesionario
+	@OneToMany(mappedBy = "concesionario")
 	private List<TrabajadorBean> trabajadores = new ArrayList<TrabajadorBean>();
 
 	// Un concesionario para muchos coches
 	@ManyToMany(mappedBy = "concesionarios", cascade = CascadeType.MERGE)
 	private List<CocheBean> coches = new ArrayList<CocheBean>();
-	
 
-public void addTrabajador(TrabajadorBean trabajador) {
-		
-		if(!trabajadores.contains(trabajador)) {
-			
+	public void addTrabajador(TrabajadorBean trabajador) {
+
+		if (!trabajadores.contains(trabajador)) {
+
 			trabajadores.add(trabajador);
 			trabajador.setConcesionario(this);
 		}
 	}
-	
-	
 
 	public void addCoche(CocheBean coche) {
 
@@ -125,7 +119,7 @@ public void addTrabajador(TrabajadorBean trabajador) {
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
-	
+
 	public List<CocheBean> getCoches() {
 		return coches;
 	}
@@ -133,7 +127,5 @@ public void addTrabajador(TrabajadorBean trabajador) {
 	public void setCoches(List<CocheBean> coches) {
 		this.coches = coches;
 	}
-
-	
 
 }

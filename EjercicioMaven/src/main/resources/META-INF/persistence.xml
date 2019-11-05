@@ -15,6 +15,13 @@
     <class>pruebasMaven.negocio.AlumnoBean</class>
 	<class>pruebasMaven.negocio.AsignaturaBean</class>
 	-->
+	<class>EjercicioMaven.negocio.CategoriaBean</class>
+    <class>EjercicioMaven.negocio.CocheBean</class>
+    <class>EjercicioMaven.negocio.ConcesionarioBean</class>
+    <class>EjercicioMaven.negocio.ReparacionBean</class>
+    <class>EjercicioMaven.negocio.TallerBean</class>
+    <class>EjercicioMaven.negocio.TrabajadorBean</class>
+	
 	
     <properties>
       <!-- Depende del tipo de base de datos que queramos conectar -->
@@ -50,20 +57,26 @@
   	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     
     <!-- Clase que vamos a referenciar (paquete y nombre sin .java o .class EJEMPLO -->
-    <class>pruebasMaven.negocio.AlumnoBean</class>
+    <class>EjercicioMaven.negocio.CategoriaBean</class>
+    <class>EjercicioMaven.negocio.CocheBean</class>
+    <class>EjercicioMaven.negocio.ConcesionarioBean</class>
+    <class>EjercicioMaven.negocio.ReparacionBean</class>
+    <class>EjercicioMaven.negocio.TallerBean</class>
+    <class>EjercicioMaven.negocio.TrabajadorBean</class>
+
 
     <properties>
       <!-- Depende del tipo de base de datos que queramos conectar -->
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/concesionarios" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/concesionarios" />
       <property name="javax.persistence.jdbc.user" value="root" />
-      <property name="javax.persistence.jdbc.password" value="" />
+      <property name="javax.persistence.jdbc.password" value="2583" />
       
       <!-- Log de sentencias SQL -->
       <property name="hibernate.show_sql" value="true"/>
       
       <!-- Dialecto que comunica la base de datos con Hibernate -->
-      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect"/>
       
       <!-- Que hace Hibernate cuando no encuentra las tablas en a base de datos -->
       <property name="hibernate.hbm2ddl.auto" value="update" />

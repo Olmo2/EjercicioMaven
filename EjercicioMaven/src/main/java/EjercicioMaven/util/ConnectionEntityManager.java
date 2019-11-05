@@ -12,7 +12,7 @@ public class ConnectionEntityManager {
 	
 	private ConnectionEntityManager() {
 		
-		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("com.olmo.pruebasMaven.H2");
+		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("com.olmo.pruebasMaven.MySql");
 		entityManager = entityManagerFactory.createEntityManager();
 	}
 	

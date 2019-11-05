@@ -2,7 +2,7 @@ package EjercicioMaven.modelo.reparacion;
 
 import javax.persistence.EntityManager;
 
-import EjercicioMaven.modelo.negocio.ReparacionBean;
+import EjercicioMaven.negocio.ReparacionBean;
 import EjercicioMaven.util.ConnectionEntityManagerFactory;
 
 public class DeleteReparacion {

@@ -2,7 +2,7 @@ package EjercicioMaven.modelo.concesionario;
 
 import javax.persistence.EntityManager;
 
-import EjercicioMaven.modelo.negocio.ConcesionarioBean;
+import EjercicioMaven.negocio.ConcesionarioBean;
 import EjercicioMaven.util.ConnectionEntityManagerFactory;
 
 

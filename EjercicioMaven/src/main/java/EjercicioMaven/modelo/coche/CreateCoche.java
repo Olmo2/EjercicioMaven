@@ -2,7 +2,7 @@ package EjercicioMaven.modelo.coche;
 
 import javax.persistence.EntityManager;
 
-import EjercicioMaven.modelo.negocio.CocheBean;
+import EjercicioMaven.negocio.CocheBean;
 import EjercicioMaven.util.ConnectionEntityManagerFactory;
 
 public class CreateCoche {

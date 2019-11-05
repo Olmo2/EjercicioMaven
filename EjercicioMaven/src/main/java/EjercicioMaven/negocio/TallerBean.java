@@ -1,4 +1,4 @@
-package EjercicioMaven.modelo.negocio;
+package EjercicioMaven.negocio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +26,7 @@ public class TallerBean {
 	@Column
 	private long idTaller;
 
-	@OneToOne
-	@JoinColumn(name = "FK_concesionario")
+	@OneToOne(mappedBy="taller")
 	private ConcesionarioBean concesionario;
 
 	@OneToMany(mappedBy = "taller", cascade = CascadeType.MERGE)

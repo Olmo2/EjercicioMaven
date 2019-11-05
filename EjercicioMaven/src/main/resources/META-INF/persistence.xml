@@ -6,7 +6,7 @@
 
 
 
-  <persistence-unit name="com.marcos.pruebasMaven.H2" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="com.olmo.pruebasMaven.H2" transaction-type="RESOURCE_LOCAL">
     
     <!-- Framework proveedor del servicio de acceso a los datos -->
   	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
@@ -44,7 +44,7 @@
   
   
   
-  <persistence-unit name="com.marcos.pruebasMaven.MySql" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="com.olmo.pruebasMaven.MySql" transaction-type="RESOURCE_LOCAL">
     
     <!-- Framework proveedor del servicio de acceso a los datos -->
   	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
@@ -55,9 +55,9 @@
     <properties>
       <!-- Depende del tipo de base de datos que queramos conectar -->
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.0.1:3306/colegio" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://127.0.0.1:3306/concesionarios" />
       <property name="javax.persistence.jdbc.user" value="root" />
-      <property name="javax.persistence.jdbc.password" value="rootpw" />
+      <property name="javax.persistence.jdbc.password" value="" />
       
       <!-- Log de sentencias SQL -->
       <property name="hibernate.show_sql" value="true"/>

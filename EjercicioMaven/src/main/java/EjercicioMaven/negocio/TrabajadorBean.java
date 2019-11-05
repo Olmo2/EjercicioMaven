@@ -1,4 +1,4 @@
-package EjercicioMaven.modelo.negocio;
+package EjercicioMaven.negocio;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

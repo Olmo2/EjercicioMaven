@@ -1,4 +1,4 @@
-package EjercicioMaven.modelo.negocio;
+package EjercicioMaven.negocio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
+import javax.persistence.MapKey;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -39,6 +42,10 @@ public class ConcesionarioBean {
 
 	@Column(name = "telefono")
 	private int telefono;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+//	@JoinColumn(name = "FK_Taller")
+	private TallerBean taller;
 
 	// Trabajan muchos en un solo concesionario
 	@OneToMany(mappedBy = "concesionario")
@@ -72,6 +79,23 @@ public class ConcesionarioBean {
 		}
 	}
 
+	public TallerBean getTaller() {
+		return taller;
+	}
+
+	
+
+	public void setTaller(TallerBean taller) {
+		this.taller = taller;
+	}
+
+	public List<TrabajadorBean> getTrabajadores() {
+		return trabajadores;
+	}
+
+	public void setTrabajadores(List<TrabajadorBean> trabajadores) {
+		this.trabajadores = trabajadores;
+	}
 	public long getIdConcesionario() {
 		return idConcesionario;
 	}

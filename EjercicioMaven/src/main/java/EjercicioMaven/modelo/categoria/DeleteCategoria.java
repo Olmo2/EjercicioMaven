@@ -2,8 +2,7 @@ package EjercicioMaven.modelo.categoria;
 
 import javax.persistence.EntityManager;
 
-import EjercicioMaven.modelo.negocio.CategoriaBean;
-
+import EjercicioMaven.negocio.CategoriaBean;
 import EjercicioMaven.util.ConnectionEntityManagerFactory;
 
 public class DeleteCategoria {

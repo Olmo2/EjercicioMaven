@@ -2,7 +2,7 @@ package EjercicioMaven.modelo.taller;
 
 import javax.persistence.EntityManager;
 
-import EjercicioMaven.modelo.negocio.TallerBean;
+import EjercicioMaven.negocio.TallerBean;
 import EjercicioMaven.util.ConnectionEntityManagerFactory;
 
 public class CreateTaller {

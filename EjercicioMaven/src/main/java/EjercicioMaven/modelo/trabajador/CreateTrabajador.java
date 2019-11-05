@@ -2,8 +2,7 @@ package EjercicioMaven.modelo.trabajador;
 
 import javax.persistence.EntityManager;
 
-
-import EjercicioMaven.modelo.negocio.TrabajadorBean;
+import EjercicioMaven.negocio.TrabajadorBean;
 import EjercicioMaven.util.ConnectionEntityManagerFactory;
 
 public class CreateTrabajador {

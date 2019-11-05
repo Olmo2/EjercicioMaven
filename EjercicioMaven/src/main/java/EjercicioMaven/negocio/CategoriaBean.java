@@ -1,4 +1,4 @@
-package EjercicioMaven.modelo.negocio;
+package EjercicioMaven.negocio;
 
 import java.util.ArrayList;
 import java.util.List;

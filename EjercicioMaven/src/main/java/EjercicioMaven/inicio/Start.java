@@ -3,15 +3,15 @@ package EjercicioMaven.inicio;
 import EjercicioMaven.modelo.categoria.CreateCategoria;
 import EjercicioMaven.modelo.coche.CreateCoche;
 import EjercicioMaven.modelo.concesionario.CreateConcesionario;
-import EjercicioMaven.modelo.negocio.CategoriaBean;
-import EjercicioMaven.modelo.negocio.CocheBean;
-import EjercicioMaven.modelo.negocio.ConcesionarioBean;
-import EjercicioMaven.modelo.negocio.ReparacionBean;
-import EjercicioMaven.modelo.negocio.TallerBean;
-import EjercicioMaven.modelo.negocio.TrabajadorBean;
 import EjercicioMaven.modelo.reparacion.CreateReparacion;
 import EjercicioMaven.modelo.taller.CreateTaller;
 import EjercicioMaven.modelo.trabajador.CreateTrabajador;
+import EjercicioMaven.negocio.CategoriaBean;
+import EjercicioMaven.negocio.CocheBean;
+import EjercicioMaven.negocio.ConcesionarioBean;
+import EjercicioMaven.negocio.ReparacionBean;
+import EjercicioMaven.negocio.TallerBean;
+import EjercicioMaven.negocio.TrabajadorBean;
 
 public class Start {
 
@@ -25,7 +25,7 @@ public class Start {
 
 		ConcesionarioBean cochesPaco = new ConcesionarioBean();
 		cochesPaco.setNombre("Coches Paco");
-
+		
 		ConcesionarioBean autosJuan = new ConcesionarioBean();
 		autosJuan.setNombre("Autos Juan");
 
@@ -89,6 +89,7 @@ public class Start {
 		
 		TallerBean ada = new TallerBean();
 		ada.setConcesionario(cochesPaco);
+		cochesPaco.setTaller(ada);
 		
 		ReparacionBean reparacion1 = new ReparacionBean();
 		reparacion1.setModelo("Ford Mierda GTI");
@@ -151,8 +152,8 @@ public class Start {
 		createTrabajdor.create(luis);
 		
 		
-		CreateTaller createTaller= new CreateTaller();
-		createTaller.create(ada);
+//		CreateTaller createTaller= new CreateTaller();
+//		createTaller.create(ada);
 		
 		CreateReparacion createReparacion= new CreateReparacion();
 		createReparacion.create(reparacion1);
